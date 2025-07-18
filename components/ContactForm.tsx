@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Facebook, Github, Twitter, Mail, MapPin, Phone } from "lucide-react"
+import { Facebook, Github, Twitter, Mail, Phone } from "lucide-react"
 import Link from "next/link"
 
 export default function ContactForm() {
@@ -48,12 +48,12 @@ export default function ContactForm() {
   return (
     <div className="bg-card p-8 rounded-lg shadow-md border border-border w-full">
       <h2 className="text-3xl font-bold text-foreground mb-6 text-center lg:text-left">
-        Let’s work together — Reach out!
+        Let’s work together Reach out!
       </h2>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <Label htmlFor="name" className="text-lg text-foreground mb-2 block">
-            Name *
+            Name
           </Label>
           <Input
             id="name"
@@ -67,7 +67,7 @@ export default function ContactForm() {
         </div>
         <div>
           <Label htmlFor="email" className="text-lg text-foreground mb-2 block">
-            Email *
+            Email
           </Label>
           <Input
             id="email"
@@ -81,7 +81,7 @@ export default function ContactForm() {
         </div>
         <div>
           <Label htmlFor="message" className="text-lg text-foreground mb-2 block">
-            Message *
+            Message
           </Label>
           <Textarea
             id="message"
@@ -108,9 +108,7 @@ export default function ContactForm() {
 
       <div className="mt-8 pt-6 border-t border-border text-center">
         <h3 className="text-xl font-semibold text-foreground mb-4">Contact Information:</h3>
-        <p className="text-muted-foreground mb-2 flex items-center justify-center gap-2">
-          <MapPin className="h-5 w-5 text-primary" /> Ibadan, Oyo State, Nigeria
-        </p>
+        {/* Removed location line */}
         <p className="text-muted-foreground mb-2 flex items-center justify-center gap-2">
           <Mail className="h-5 w-5 text-primary" /> etbismark@gmail.com
         </p>

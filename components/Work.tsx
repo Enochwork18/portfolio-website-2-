@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion" // Import motion
+import { motion, easeOut } from "framer-motion" // Import motion
 
 export default function Work() {
   const projects = [
@@ -33,7 +33,7 @@ export default function Work() {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
   }
 
   return (

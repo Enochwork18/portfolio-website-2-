@@ -24,30 +24,29 @@ export default function UIDesignPage() {
         <h2 className="text-3xl font-semibold mb-4">What I Offer:</h2>
         <ul className="list-disc list-inside text-lg text-muted-foreground mb-8 space-y-2">
           <li>
-            **Intuitive Layouts:** Designing clear and logical layouts that guide users effortlessly through your
+            Intuitive Layouts: Designing clear and logical layouts that guide users effortlessly through your
             application or website.
           </li>
           <li>
-            **Visual Hierarchy:** Establishing a strong visual hierarchy to highlight important information and actions.
+            Visual Hierarchy: Establishing a strong visual hierarchy to highlight important information and actions.
           </li>
-          <li>**Component Libraries:** Creating reusable UI components for consistency and efficient development.</li>
+          <li>Component Libraries: Creating reusable UI components for consistency and efficient development.</li>
           <li>
-            **Interactive Prototypes:** Developing interactive prototypes to test user flows and gather feedback early
-            in the design process.
+            Interactive Prototypes: Developing interactive prototypes to test user flows and gather feedback early in
+            the design process.
           </li>
           <li>
-            **Responsive Design:** Ensuring your UI looks and performs beautifully on all devices, from mobile to
-            desktop.
+            Responsive Design: Ensuring your UI looks and performs beautifully on all devices, from mobile to desktop.
           </li>
         </ul>
 
         <h2 className="text-3xl font-semibold mb-4">My Process:</h2>
         <ol className="list-decimal list-inside text-lg text-muted-foreground mb-8 space-y-2">
-          <li>**Research & Analysis:** Understanding user needs and business goals.</li>
-          <li>**Wireframing & Prototyping:** Creating low-fidelity and high-fidelity mockups.</li>
-          <li>**Visual Design:** Applying branding, color palettes, and typography.</li>
-          <li>**User Testing:** Validating designs with real users.</li>
-          <li>**Handoff:** Preparing design assets for development.</li>
+          <li>Research & Analysis: Understanding user needs and business goals.</li>
+          <li>Wireframing & Prototyping: Creating low-fidelity and high-fidelity mockups.</li>
+          <li>Visual Design: Applying branding, color palettes, and typography.</li>
+          <li>User Testing: Validating designs with real users.</li>
+          <li>Handoff: Preparing design assets for development.</li>
         </ol>
 
         <div className="text-center mt-12">

@@ -2,8 +2,8 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, MapPin, Phone } from "lucide-react"
-import { motion } from "framer-motion" // Import motion
+import { Mail, Phone } from "lucide-react"
+import { motion, easeOut } from "framer-motion" // Import motion and easeOut
 
 export default function About() {
   const containerVariants = {
@@ -18,7 +18,7 @@ export default function About() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } }, // Changed "easeOut" to easeOut
   }
 
   return (
@@ -33,15 +33,15 @@ export default function About() {
         About Me
       </motion.h2>
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-card p-8 rounded-lg shadow-md border border-border max-w-6xl mx-auto"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-card p-8 rounded-lg shadow-md border border-border max-w-6xl mx-auto"
         variants={containerVariants}
       >
         <motion.div variants={itemVariants} className="flex justify-center lg:justify-start">
           <Image
             src="/about-image.png"
             alt="Developer's desk with code on screen"
-            width={500}
-            height={500}
+            width={600}
+            height={600}
             className="rounded-lg shadow-xl"
           />
         </motion.div>
@@ -52,7 +52,7 @@ export default function About() {
           <motion.p variants={itemVariants} className="text-lg text-muted-foreground mb-6">
             A focused and innovative graphic design student with a passion for branding, illustration, and web
             development. Proficient in creating visual identities, vector art, and typography. Solid knowledge of HTML,
-            CSS, JavaScript (elementary), and .NET. Strong communicator, detail-driven, and continuously learning.
+            CSS, JavaScript, and .NET. Strong communicator, detail-driven, and continuously learning.
           </motion.p>
 
           <motion.div variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
@@ -68,10 +68,6 @@ export default function About() {
                   <Link href="mailto:etbismark@gmail.com" className="hover:text-primary">
                     etbismark@gmail.com
                   </Link>
-                </li>
-                <li className="flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  <span>Oyo, Nigeria</span>
                 </li>
               </ul>
             </motion.div>
@@ -91,10 +87,10 @@ export default function About() {
             <h4 className="text-2xl font-semibold text-primary mb-3">Tools & Skills</h4>
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li>
-                <strong>Graphic Design & Branding:</strong> Adobe Illustrator, Photoshop, Canva, Figma (learning)
+                <strong>Graphic Design & Branding:</strong> Adobe Illustrator, Photoshop, Canva, Figma
               </li>
               <li>
-                <strong>Web Development:</strong> HTML, CSS, JavaScript (Basic), .NET
+                <strong>Web Development:</strong> HTML, CSS, JavaScript, .NET
               </li>
               <li>
                 <strong>Multimedia & Infographics:</strong> Vector Graphics, Typography, UI/UX Fundamentals, JustAudio

@@ -23,24 +23,21 @@ export default function InfographicsPage() {
 
         <h2 className="text-3xl font-semibold mb-4">What I Offer:</h2>
         <ul className="list-disc list-inside text-lg text-muted-foreground mb-8 space-y-2">
+          <li>Data Visualization: Converting raw data into easy-to-understand charts, graphs, and visual elements.</li>
+          <li>Storytelling: Crafting a narrative through visuals to make your information more impactful.</li>
+          <li>Custom Illustrations: Creating unique illustrations and icons to enhance visual appeal.</li>
           <li>
-            **Data Visualization:** Converting raw data into easy-to-understand charts, graphs, and visual elements.
+            Layout & Typography: Designing layouts that guide the eye and using typography effectively for readability.
           </li>
-          <li>**Storytelling:** Crafting a narrative through visuals to make your information more impactful.</li>
-          <li>**Custom Illustrations:** Creating unique illustrations and icons to enhance visual appeal.</li>
-          <li>
-            **Layout & Typography:** Designing layouts that guide the eye and using typography effectively for
-            readability.
-          </li>
-          <li>**Versatile Use:** Infographics suitable for print, web, and social media platforms.</li>
+          <li>Versatile Use: Infographics suitable for print, web, and social media platforms.</li>
         </ul>
 
         <h2 className="text-3xl font-semibold mb-4">My Process:</h2>
         <ol className="list-decimal list-inside text-lg text-muted-foreground mb-8 space-y-2">
-          <li>**Content Gathering:** Receiving your data and key messages.</li>
-          <li>**Concept & Outline:** Developing a visual concept and structuring the information.</li>
-          <li>**Design & Iteration:** Creating the infographic and refining based on feedback.</li>
-          <li>**Finalization:** Delivering high-resolution files in desired formats.</li>
+          <li>Content Gathering: Receiving your data and key messages.</li>
+          <li>Concept & Outline: Developing a visual concept and structuring the information.</li>
+          <li>Design & Iteration: Creating the infographic and refining based on feedback.</li>
+          <li>Finalization: Delivering high-resolution files in desired formats.</li>
         </ol>
 
         <div className="text-center mt-12">

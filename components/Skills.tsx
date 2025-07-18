@@ -1,7 +1,7 @@
 "use client"
 
 import { Palette, Code, Layout, Lightbulb } from "lucide-react"
-import { motion } from "framer-motion"
+import { motion, easeOut } from "framer-motion"
 
 export default function Skills() {
   const hardSkills = [
@@ -31,7 +31,7 @@ export default function Skills() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
   }
 
   const containerVariants = {

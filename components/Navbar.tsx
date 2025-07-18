@@ -43,7 +43,7 @@ export default function Navbar() {
             variant="ghost"
             size="icon"
             onClick={() => setIsOpen(!isOpen)}
-            className="text-foreground hover:text-primary"
+            className="text-foreground hover:text-muted-foreground"
             aria-label="Toggle navigation menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

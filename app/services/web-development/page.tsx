@@ -24,31 +24,30 @@ export default function WebDevelopmentPage() {
         <h2 className="text-3xl font-semibold mb-4">What I Offer:</h2>
         <ul className="list-disc list-inside text-lg text-muted-foreground mb-8 space-y-2">
           <li>
-            **Responsive Websites:** Developing sites that adapt seamlessly to any screen size, from mobile phones to
-            large desktops.
+            Responsive Websites: Developing sites that adapt seamlessly to any screen size, from mobile phones to large
+            desktops.
           </li>
           <li>
-            **Modern Frontend:** Utilizing the latest web technologies like React, Next.js, and Tailwind CSS to build
-            fast and scalable applications.
+            Modern Frontend: Utilizing the latest web technologies like React, Next.js, and Tailwind CSS to build fast
+            and scalable applications.
           </li>
           <li>
-            **Performance Optimization:** Ensuring quick loading times and smooth interactions for an optimal user
+            Performance Optimization: Ensuring quick loading times and smooth interactions for an optimal user
             experience.
           </li>
           <li>
-            **SEO Best Practices:** Implementing search engine optimization techniques to improve your site's
-            visibility.
+            SEO Best Practices: Implementing search engine optimization techniques to improve your site's visibility.
           </li>
-          <li>**Integration:** Connecting your website with various APIs and third-party services as needed.</li>
+          <li>Integration: Connecting your website with various APIs and third-party services as needed.</li>
         </ul>
 
         <h2 className="text-3xl font-semibold mb-4">My Process:</h2>
         <ol className="list-decimal list-inside text-lg text-muted-foreground mb-8 space-y-2">
-          <li>**Planning:** Defining project scope, technologies, and timelines.</li>
-          <li>**Development:** Writing clean, modular, and well-documented code.</li>
-          <li>**Testing:** Rigorous testing across devices and browsers.</li>
-          <li>**Deployment:** Launching your website with reliable hosting solutions.</li>
-          <li>**Maintenance:** Providing ongoing support and updates.</li>
+          <li>Planning: Defining project scope, technologies, and timelines.</li>
+          <li>Development: Writing clean, modular, and well-documented code.</li>
+          <li>Testing: Rigorous testing across devices and browsers.</li>
+          <li>Deployment: Launching your website with reliable hosting solutions.</li>
+          <li>Maintenance: Providing ongoing support and updates.</li>
         </ol>
 
         <div className="text-center mt-12">

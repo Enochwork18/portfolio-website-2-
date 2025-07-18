@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion" // Import motion
+import { motion, easeOut } from "framer-motion" // Import motion
 
 export default function Hero() {
   const containerVariants = {
@@ -18,7 +18,7 @@ export default function Hero() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
   }
 
   return (
@@ -63,7 +63,7 @@ export default function Hero() {
       <motion.div
         className="lg:w-1/2 flex justify-center lg:justify-end"
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 1, scale: 1, transition: { duration: 0.8, ease: easeOut, delay: 0.4 } }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
       >
         <Image

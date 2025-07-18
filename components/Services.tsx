@@ -4,7 +4,7 @@ import type React from "react"
 import { Brush, Monitor, Code, BarChart } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion" // Import motion
+import { motion, easeOut } from "framer-motion" // Import motion
 
 interface ServiceItemProps {
   icon: React.ReactNode
@@ -16,7 +16,7 @@ interface ServiceItemProps {
 const ServiceItem: React.FC<ServiceItemProps> = ({ icon, title, description, link }) => {
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
   }
 
   return (
