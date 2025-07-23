@@ -41,7 +41,6 @@ export const metadata: Metadata = {
   verification: {
     google: "qRSp5BKTjansSmm068w4kZ1o0_PPLyVc9JUkjEVAcG8", // Your unique Google verification code
   },
-  // Temporary comment to force Git update
   // --- END VERIFICATION SECTION ---
 }
 
