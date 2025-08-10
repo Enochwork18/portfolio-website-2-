@@ -47,7 +47,7 @@ export default function Footer() {
             <Link href="https://github.com/Enochwork18" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github className="h-7 w-7 text-foreground hover:text-primary transition-colors duration-300" />
             </Link>
-            <Link href="https://x.com/Tummy1920?" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <Link href="https://x.com/bismarkenoch?" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <Twitter className="h-7 w-7 text-foreground hover:text-primary transition-colors duration-300" />
             </Link>
             <Link
