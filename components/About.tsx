@@ -102,7 +102,7 @@ export default function About() {
           <motion.blockquote
             variants={itemVariants}
             className="text-xl italic text-muted-foreground border-l-4 border-primary pl-4 py-2"
-          >
+          > 
             "I believe great design speaks. I code to build what I imagine."
           </motion.blockquote>
         </div>
