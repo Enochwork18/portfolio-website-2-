@@ -135,7 +135,7 @@ export default function ContactForm() {
             <Github className="h-8 w-8 text-primary hover:text-secondary transition-colors duration-300" />
           </Link>
           <Link
-            href="https://x.com/Tummy1920?"
+            href="https://x.com/bismarkenoch?"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X (Twitter) Profile"

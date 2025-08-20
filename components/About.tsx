@@ -77,7 +77,7 @@ export default function About() {
                 <li>
                   <strong>Advanced Diploma in Software Engineering (ADSE) & Graphic Design</strong>
                   <br />
-                  Aptech Computer Education, Ibadan (April 2023 – July 2025)
+                  Aptech Computer Education, Ibadan
                 </li>
               </ul>
             </motion.div>
