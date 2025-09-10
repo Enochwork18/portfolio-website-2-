@@ -57,7 +57,8 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY)
 
     const toEmail = process.env.CONTACT_TO_EMAIL || 'etbismark@gmail.com'
-    const fromEmail = process.env.CONTACT_FROM_EMAIL || 'noreply@yourdomain.com'
+    // Use Resend's onboarding sender until a custom domain sender is verified
+    const fromEmail = process.env.CONTACT_FROM_EMAIL || 'onboarding@resend.dev'
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
