@@ -3,7 +3,6 @@
 import type React from "react"
 
 import { useState } from "react"
-import emailjs from "@emailjs/browser"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -15,32 +14,35 @@ export default function ContactForm() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
-  const [status, setStatus] = useState("") // 'idle', 'sending', 'success', 'error'
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
+  const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus("sending")
-
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      to_name: "Enoch Bismark", // Your name
-      message: message,
-    }
+    setError(null)
 
     try {
-      await emailjs.send(
-        "service_kfgm9n8", // Your EmailJS Service ID
-        "template_4onk8gf", // Your EmailJS Template ID
-        templateParams,
-        "ztgVqiUBC-DGbdTdN", // Your EmailJS Public Key (also initialized in layout.tsx)
-      )
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      })
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        setError(data?.error || "Failed to send message.")
+        setStatus("error")
+        return
+      }
+
       setStatus("success")
       setName("")
       setEmail("")
       setMessage("")
-    } catch (error) {
-      console.error("Failed to send email:", error)
+    } catch (err) {
+      console.error("Failed to send message:", err)
+      setError("Failed to send message. Please try again later.")
       setStatus("error")
     }
   }
@@ -98,17 +100,16 @@ export default function ContactForm() {
           className="w-full bg-primary hover:bg-secondary text-primary-foreground font-bold py-3 rounded-md text-lg transition-all duration-300"
           disabled={status === "sending"}
         >
-          {status === "sending" ? "Send Message" : "Send Message"}
+          {status === "sending" ? "Sending..." : "Send Message"}
         </Button>
         {status === "success" && <p className="text-green-500 text-center mt-4">Message sent successfully!</p>}
         {status === "error" && (
-          <p className="text-red-500 text-center mt-4">Failed to send message. Please try again later.</p>
+          <p className="text-red-500 text-center mt-4">{error || "Failed to send message. Please try again later."}</p>
         )}
       </form>
 
       <div className="mt-8 pt-6 border-t border-border text-center">
         <h3 className="text-xl font-semibold text-foreground mb-4">Contact Information:</h3>
-        {/* Removed location line */}
         <p className="text-muted-foreground mb-2 flex items-center justify-center gap-2">
           <Mail className="h-5 w-5 text-primary" /> etbismark@gmail.com
         </p>

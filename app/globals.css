@@ -4,6 +4,39 @@
 
 @layer base {
   :root {
+    /* Light theme colors */
+    --background: 0 0% 98%; /* Light background */
+    --foreground: 0 0% 10%; /* Dark text */
+
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 48 100% 45%; /* Slightly darker yellow for light theme */
+    --primary-foreground: 0 0% 10%;
+
+    --secondary: 48 80% 75%; /* Light yellow */
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 94%; /* Light gray for muted elements */
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 48 100% 45%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 85%; /* Light border */
+    --input: 0 0% 92%;
+    --ring: 48 100% 45%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark theme colors */
     --background: 0 0% 10%; /* Deep black */
     --foreground: 0 0% 90%; /* Light text */
 
@@ -25,42 +58,10 @@
     --accent: 48 100% 50%; /* Vibrant yellow */
     --accent-foreground: 0 0% 10%;
 
-    --destructive: 0 84.2% 60.2%; /* Red for destructive actions */
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 0 0% 25%; /* Dark border */
-    --input: 0 0% 20%;
-    --ring: 48 100% 50%;
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    /* Keep the same for consistency, or remove if only one theme */
-    --background: 0 0% 10%;
-    --foreground: 0 0% 90%;
-
-    --card: 0 0% 15%;
-    --card-foreground: 0 0% 90%;
-
-    --popover: 0 0% 15%;
-    --popover-foreground: 0 0% 90%;
-
-    --primary: 48 100% 50%;
-    --primary-foreground: 0 0% 10%;
-
-    --secondary: 48 100% 30%;
-    --secondary-foreground: 0 0% 90%;
-
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 70%;
-
-    --accent: 48 100% 50%;
-    --accent-foreground: 0 0% 10%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 25%;
+    --border: 0 0% 25%; /* Dark border */
     --input: 0 0% 20%;
     --ring: 48 100% 50%;
   }
@@ -75,23 +76,23 @@
   }
 }
 
-/* Custom Scrollbar Styles for dark theme */
+/* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--muted)); /* Dark background for the track */
+  background: hsl(var(--muted));
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary)); /* Yellow thumb */
+  background: hsl(var(--primary));
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--secondary)); /* Muted yellow on hover */
+  background: hsl(var(--secondary));
 }
 
 /* For Firefox */
