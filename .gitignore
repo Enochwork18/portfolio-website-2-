@@ -25,3 +25,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large assets / personal files
+Aptech certificate/
+my grpic work/
+public/certificates/
+public/cv/
+public/graphic-design/
+*.docx
+Portfolio_OpenCode_Prompt.md
+Portfolio_OpenCode_Prompt_Round3_Premium_UIUX.md

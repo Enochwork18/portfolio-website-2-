@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import Navbar from "@/components/Navbar"
@@ -9,22 +9,37 @@ import { Analytics } from "@vercel/analytics/react"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Suspense } from "react"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+})
 
 export const metadata: Metadata = {
-  title: "Enoch Bismark - Creative Designer & Developer",
-  description: "Enoch Bismark's professional portfolio showcasing UI/UX, graphic design, web development, and more.",
+  title: "Bismark Enoch — Frontend Developer & Creative Engineer | UI/UX-Informed Graphic Designer",
+  description:
+    "Frontend developer and creative engineer bridging design and code. Builds responsive, accessible web apps with React, Next.js, TypeScript, and Tailwind CSS. Ships production sites spanning manufacturing, enterprise AI, and creative-services brands.",
   openGraph: {
-    title: "Enoch Bismark - Creative Designer & Developer",
-    description: "Enoch Bismark's professional portfolio showcasing UI/UX, graphic design, web development, and more.",
-    url: "https://portfolio-website-2-git-main-enochs-projects-58447181.vercel.app",
-    siteName: "Enoch Bismark Portfolio",
+    title: "Bismark Enoch — Frontend Developer & Creative Engineer | UI/UX-Informed Graphic Designer",
+    description:
+      "Frontend developer and creative engineer bridging design and code. Builds responsive, accessible web apps with React, Next.js, TypeScript, and Tailwind CSS.",
+    url: "https://portfolio-website-2-blue.vercel.app",
+    siteName: "Bismark Enoch Portfolio",
     images: [
       {
-        url: "https://portfolio-website-2-git-main-enochs-projects-58447181.vercel.app/og-image.png",
+        url: "https://portfolio-website-2-blue.vercel.app/hero-image.png",
         width: 1200,
         height: 630,
-        alt: "Enoch Bismark Portfolio",
+        alt: "Bismark Enoch — Frontend Developer & Creative Engineer",
       },
     ],
     locale: "en_US",
@@ -32,16 +47,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Enoch Bismark - Creative Designer & Developer",
-    description: "Enoch Bismark's professional portfolio showcasing UI/UX, graphic design, web development, and more.",
-    images: ["https://portfolio-website-2-git-main-enochs-projects-58447181.vercel.app/twitter-image.png"],
+    title: "Bismark Enoch — Frontend Developer & Creative Engineer",
+    description:
+      "Frontend developer and creative engineer bridging design and code. Builds responsive, accessible web apps with React, Next.js, TypeScript, and Tailwind CSS.",
+    images: ["https://portfolio-website-2-blue.vercel.app/hero-image.png"],
   },
-  // --- GOOGLE SEARCH CONSOLE VERIFICATION ---
   verification: {
-    google: "qRSp5BKTjansSmm068w4kZ1o0_PPLyVc9JUkjEVAcG8", // Your unique Google verification code
+    google: "qRSp5BKTjansSmm068w4kZ1o0_PPLyVc9JUkjEVAcG8",
   },
-  // Temporary comment to force Git update
-  // --- END VERIFICATION SECTION ---
 }
 
 export default function RootLayout({
@@ -50,8 +63,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={cn(inter.className)}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={cn(inter.variable, spaceGrotesk.variable, jetbrainsMono.variable, "font-body antialiased")}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <Suspense fallback={<div>Loading...</div>}>
             <Navbar />

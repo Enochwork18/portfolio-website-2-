@@ -6,7 +6,7 @@ import { z } from 'zod'
 const ContactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters').max(100),
   email: z.string().email('Invalid email address'),
-  message: z.string().min(10, 'Message must be at least 10 characters').max(1000),
+  message: z.string().min(1, 'Message is required').max(1000),
 })
 
 // Simple rate limiting (in-memory, resets on server restart)
@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
           </div>
         </div>
       `,
-      replyTo: validatedData.email,
+      reply_to: validatedData.email,
     })
 
     if (error) {

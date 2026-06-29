@@ -1,46 +1,60 @@
 "use client"
 
-import { Palette, Code, Layout, Lightbulb } from "lucide-react"
+import { Code, Terminal, Palette, Layout, Users } from "lucide-react"
 import { motion, easeOut } from "framer-motion"
 
 export default function Skills() {
-  const hardSkills = [
+  const skillCategories = [
     {
-      icon: <Palette className="h-8 w-8 text-primary" />,
-      category: "Design Tools",
-      items: ["Adobe Illustrator", "Photoshop", "Canva", "Figma"],
+      icon: <Code className="h-5 w-5 text-circuit" />,
+      category: "Frontend Development",
+      items: [
+        "HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript",
+        "React.js", "Next.js", "Tailwind CSS", "Bootstrap", "Sass/SCSS",
+      ],
     },
     {
-      icon: <Code className="h-8 w-8 text-primary" />,
-      category: "Frontend",
-      items: ["HTML", "CSS", "JavaScript", ".NET"],
+      icon: <Terminal className="h-5 w-5 text-circuit" />,
+      category: "Backend & Tools",
+      items: [
+        "Node.js", "Python", "Django", "Java", "C#", ".NET",
+        "SQL", "MongoDB", "MySQL", "REST APIs", "Supabase", "Git/GitHub",
+      ],
     },
     {
-      icon: <Layout className="h-8 w-8 text-primary" />,
-      category: "UI/UX",
-      items: ["Wireframes", "User Flows", "Visual Design"],
+      icon: <Palette className="h-5 w-5 text-redline" />,
+      category: "Design & Branding",
+      items: [
+        "Adobe Illustrator", "Photoshop", "Figma", "Canva",
+        "Logo & Brand Identity", "Typography", "Vector Illustration", "Infographics",
+      ],
     },
     {
-      icon: <Lightbulb className="h-8 w-8 text-primary" />,
-      category: "Multimedia",
-      items: ["Typography", "Infographics", "Vector Art"],
+      icon: <Layout className="h-5 w-5 text-circuit" />,
+      category: "UI/UX & Multimedia",
+      items: [
+        "UI/UX Fundamentals", "Wireframing & Prototyping", "Responsive Design", "Visual Storytelling",
+      ],
+    },
+    {
+      icon: <Users className="h-5 w-5 text-slate" />,
+      category: "Soft Skills",
+      items: [
+        "Attention to detail", "Client communication", "Problem-solving", "Persistence", "Cross-functional collaboration",
+      ],
     },
   ]
 
-  const softSkills = ["Creativity", "Communication", "Patience", "Curiosity"]
-
   const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
+    hidden: { opacity: 0, y: 60, scale: 0.95 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, ease: easeOut } },
   }
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
+      transition: { staggerChildren: 0.1 },
     },
   }
 
@@ -50,46 +64,53 @@ export default function Skills() {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
-      <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center">
-        My Skills
+      <motion.p
+        variants={itemVariants}
+        className="section-eyebrow text-center"
+      >
+        Fig. 02 — Skills
+      </motion.p>
+      <motion.h2
+        variants={itemVariants}
+        className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center font-display"
+      >
+        Technical Capabilities
       </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* Hard Skills Section */}
-        {hardSkills.map((skillCategory, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {skillCategories.map((skillCategory, index) => (
           <motion.div
             key={index}
-            className="bg-card p-6 rounded-lg shadow-md border border-border flex flex-col items-center text-center"
+            className="bg-card p-5 rounded-lg border border-border/50 flex flex-col relative overflow-hidden group hover:border-circuit/40 transition-colors duration-500"
             variants={itemVariants}
+            whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
           >
-            <div className="mb-4">{skillCategory.icon}</div>
-            <h4 className="text-xl font-semibold text-foreground mb-3">{skillCategory.category}</h4>
-            <ul className="list-none text-muted-foreground space-y-1">
-              {skillCategory.items.map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
+            <div className="absolute inset-0 shimmer-bg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-border/30">
+                <div className="p-1.5 rounded-md bg-circuit/5 group-hover:bg-circuit/10 transition-colors duration-300">
+                  {skillCategory.icon}
+                </div>
+                <h4 className="text-sm font-semibold text-foreground uppercase tracking-wider font-mono">
+                  {skillCategory.category}
+                </h4>
+              </div>
+              <ul className="space-y-1.5">
+                {skillCategory.items.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="text-sm text-muted-foreground font-body transition-colors duration-300 group-hover:text-foreground/80"
+                    style={{ transitionDelay: `${idx * 30}ms` }}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-circuit/20 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center" />
           </motion.div>
         ))}
-      </div>
-
-      {/* Soft Skills Section - Separate section as per design */}
-      <div className="mt-12">
-        <motion.h3 variants={itemVariants} className="text-3xl font-semibold text-foreground mb-6 text-center">
-          Soft Skills
-        </motion.h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {softSkills.map((skill, index) => (
-            <motion.div
-              key={index}
-              className="bg-card p-6 rounded-lg shadow-md border border-border flex items-center justify-center text-center"
-              variants={itemVariants}
-            >
-              <p className="text-xl font-medium text-foreground">{skill}</p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </motion.div>
   )

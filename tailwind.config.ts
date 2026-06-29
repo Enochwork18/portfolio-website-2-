@@ -19,8 +19,18 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["var(--font-display)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
+        mono: ["var(--font-mono)", "monospace"],
+      },
       colors: {
-        // New Black and Yellow Theme
+        ink: "#14161B",
+        paper: "#F5F1E8",
+        redline: "#FF5A3C",
+        circuit: "#2F7BFF",
+        slate: "#8B92A0",
+        signal: "#34D399",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -69,10 +79,54 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "draw-line": {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        typing: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
+        blink: {
+          "0%, 100%": { borderColor: "transparent" },
+          "50%": { borderColor: "hsl(14, 100%, 62%)" },
+        },
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 8px hsl(216, 100%, 59% / 0.3)" },
+          "50%": { boxShadow: "0 0 20px hsl(216, 100%, 59% / 0.6), 0 0 40px hsl(216, 100%, 59% / 0.2)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "glitch-skew": {
+          "0%": { transform: "skew(0deg)" },
+          "20%": { transform: "skew(-2deg)" },
+          "40%": { transform: "skew(1deg)" },
+          "60%": { transform: "skew(-1deg)" },
+          "80%": { transform: "skew(2deg)" },
+          "100%": { transform: "skew(0deg)" },
+        },
+        scanline: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100vh)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "draw-line": "draw-line 1s ease-out forwards",
+        "fade-in": "fade-in 0.6s ease-out forwards",
+        typing: "typing 2.5s steps(30) forwards",
+        blink: "blink 0.8s step-end infinite",
+        glow: "glow 3s ease-in-out infinite",
+        shimmer: "shimmer 3s linear infinite",
+        "glitch-skew": "glitch-skew 0.3s ease-in-out",
+        scanline: "scanline 6s linear infinite",
       },
     },
   },
