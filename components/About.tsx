@@ -20,7 +20,7 @@ export default function About() {
   }
 
   return (
-    <section className="bg-paper text-[#14161B] relative overflow-hidden">
+    <section className="bg-background text-foreground relative overflow-hidden">
       <div className="absolute inset-0 dot-grid pointer-events-none opacity-[0.06]" />
       <div className="absolute inset-0 scanline-overlay" />
       <motion.div
@@ -32,13 +32,13 @@ export default function About() {
       >
         <motion.p
           variants={itemVariants}
-          className="section-eyebrow text-center text-[#8B92A0]"
+          className="section-eyebrow text-center text-muted-foreground"
         >
           Fig. 03 — About
         </motion.p>
         <motion.h2
           variants={itemVariants}
-          className="text-4xl md:text-5xl font-bold mb-12 text-center font-display text-[#14161B]"
+          className="text-4xl md:text-5xl font-bold mb-12 text-center font-display text-foreground"
         >
           About Me
         </motion.h2>
@@ -62,13 +62,13 @@ export default function About() {
           <div>
             <motion.h3
               variants={itemVariants}
-              className="text-2xl md:text-3xl font-bold mb-6 font-display text-[#14161B] circuit-trace inline-block"
+              className="text-2xl md:text-3xl font-bold mb-6 font-display text-foreground circuit-trace inline-block"
             >
               Frontend Developer &amp; Creative Engineer
             </motion.h3>
             <motion.p
               variants={itemVariants}
-              className="text-base leading-relaxed text-[#14161B]/80 mb-6"
+              className="text-base leading-relaxed text-muted-foreground mb-6"
             >
               Frontend developer and aspiring creative engineer bridging design and code, with a foundation in graphic
               design that shapes how I think about interfaces. I build responsive, accessible web applications with React,
@@ -88,7 +88,7 @@ export default function About() {
                   <span className="inline-block w-2 h-2 rounded-full bg-redline glow-redline" />
                   Contact
                 </h4>
-                <ul className="text-[#14161B]/70 space-y-2 text-sm">
+                <ul className="text-muted-foreground space-y-2 text-sm">
                   <li className="flex items-center gap-2">
                     <MapPin className="h-4 w-4 text-circuit" />
                     <span>Oyo, Nigeria</span>
@@ -109,7 +109,7 @@ export default function About() {
 
             <motion.blockquote
               variants={itemVariants}
-              className="text-lg font-medium text-[#14161B]/60 border-l-4 border-redline pl-4 py-2 italic relative"
+              className="text-lg font-medium text-muted-foreground/80 border-l-4 border-redline pl-4 py-2 italic relative"
             >
               <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-redline to-transparent" />
               &ldquo;I believe great design speaks. I code to build what I imagine.&rdquo;

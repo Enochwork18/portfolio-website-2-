@@ -17,7 +17,7 @@ const experiences = [
     title: "Graphics Designer & Frontend Developer",
     company: "RoyalGad AG Industries Ltd",
     location: "Ibadan, Nigeria",
-    period: "2026 – Present",
+    period: "2026",
     highlights: [
       "Own the full brand and digital presence for a NAFDAC-registered hygiene and disinfectant manufacturer, including product infographics and social media content across a seven-product line.",
       "Build and maintain the company's Next.js/Supabase website on Vercel — shipping features, fixing bugs, and managing deployment configuration.",
