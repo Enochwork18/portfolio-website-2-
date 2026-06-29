@@ -50,7 +50,7 @@ export default function Certifications() {
       >
         <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
           <Image
-            src="/certificates/aptech-certificate.jpg"
+            src="/images/certificates/aptech-certificate.jpg"
             alt="ACE+AL Techwiz 4 - Certificate of Participation"
             fill
             className="object-contain"
