@@ -58,7 +58,7 @@ export default function Footer() {
               <Link href="https://github.com/Enochwork18" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5 text-[#F5F1E8]/70 hover:text-[#2F7BFF] transition-colors duration-300" />
               </Link>
-              <Link href="https://x.com/bismarkenoch?" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <Link href="https://x.com/bismakenoch" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
                 <Twitter className="h-5 w-5 text-[#F5F1E8]/70 hover:text-[#2F7BFF] transition-colors duration-300" />
               </Link>
               <Link

@@ -137,7 +137,7 @@ export default function ContactForm() {
             <Linkedin className="h-5 w-5 text-muted-foreground hover:text-circuit transition-colors duration-300" />
           </Link>
           <Link
-            href="https://x.com/bismarkenoch?"
+            href="https://x.com/bismakenoch"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X (Twitter) Profile"
