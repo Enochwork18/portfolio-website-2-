@@ -6,7 +6,6 @@ import Services from "@/components/Services"
 import Work from "@/components/Work"
 import GraphicDesign from "@/components/GraphicDesign"
 import Education from "@/components/Education"
-import Certifications from "@/components/Certifications"
 import Footer from "@/components/Footer"
 
 export default function HomePage() {
@@ -40,9 +39,6 @@ export default function HomePage() {
       <section id="education" className="py-20 relative overflow-hidden bg-background">
         <div className="absolute inset-0 dot-grid-light pointer-events-none" />
         <Education />
-      </section>
-      <section id="certifications" className="py-20 relative overflow-hidden bg-background">
-        <Certifications />
       </section>
       <Footer />
     </>

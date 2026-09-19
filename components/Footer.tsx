@@ -62,7 +62,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5 text-[#F5F1E8]/70 hover:text-[#2F7BFF] transition-colors duration-300" />
               </Link>
               <Link
-                href="https://linkedin.com/in/bismark-enoch-347a40332"
+                href="https://www.linkedin.com/in/bismark-enoch-13116a358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
